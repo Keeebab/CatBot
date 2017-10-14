@@ -13,8 +13,15 @@ class Ping extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     try {
-      const msg = await message.channel.send('🏓 Ping!');
-      msg.edit(`🏓 Pong! (Roundtrip took: ${msg.createdTimestamp - message.createdTimestamp}ms. 💙: ${Math.round(this.client.ping)}ms.)`);
+      msg.reply("Testing ping...").then(m => {
+      let latency = Math.floor((m.createdTimestamp - msg.createdTimestamp) / 6);
+      const embed = new Discord.RichEmbed()
+      .setColor(0xFFB200)
+      .setTimestamp()
+      .addField(':ping_pong:', 'I ponged back at the speed of ' +latency+ ' ms!')
+      .setFooter(`Pinged by ${message.author.username}`)
+      m.edit({embed});
+    });
     } catch (error) {
       throw error;
     }
