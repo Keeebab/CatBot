@@ -1,4 +1,5 @@
 const Command = require('../base/Command.js');
+const Discord = require("discord.js");
 
 class Ping extends Command {
   constructor(client) {
@@ -13,8 +14,8 @@ class Ping extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     try {
-      msg.reply("Testing ping...").then(m => {
-      let latency = Math.floor((m.createdTimestamp - msg.createdTimestamp) / 6);
+      message.reply("Testing ping...").then(m => {
+      let latency = Math.floor((m.createdTimestamp - message.createdTimestamp) / 6);
       const embed = new Discord.RichEmbed()
       .setColor(0xFFB200)
       .setTimestamp()
