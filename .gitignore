@@ -19,3 +19,4 @@ commands/meme.js
 commands/selfie.js
 commands/triggered.js
 package-lock.json
+commands/pubg.js

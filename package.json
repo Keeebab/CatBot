@@ -20,6 +20,7 @@
   "dependencies": {
     "abstract-leveldown": "^2.7.1",
     "canvas-constructor": "github:kyranet/canvasConstructor#2.0",
+    "choco": "^0.2.1",
     "dateformat": "^3.0.2",
     "discord.js": "^11.2.1",
     "ejs": "^2.5.7",
@@ -37,6 +38,7 @@
     "passport": "^0.4.0",
     "passport-discord": "^0.1.2",
     "path": "^0.12.7",
+    "pubg-api-redis": "^3.6.0",
     "snekfetch": "^3.4.1",
     "youtube-dl": "^1.12.2",
     "ytdl-core": "^0.18.1"
