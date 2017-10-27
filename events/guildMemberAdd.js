@@ -15,7 +15,7 @@ module.exports = class {
     .setColor(embedcolor)
     .setTimestamp()
     .setThumbnail(member.user.displayAvatarURL)
-    .setTitle('Member Joined')
+    .setAuthor('Member Joined')
 	.addField(`Name: ${member.user.tag}`, (member.user.id))
 
   return channel.send({embed});
